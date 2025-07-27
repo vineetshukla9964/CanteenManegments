@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | My Canteen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                  url('/images/35698d5f-4543-4e1b-b75e-8b497eb8500d.jpg') no-repeat center center/cover;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #ff6347;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 420px;
+      margin: 60px auto;
+    }
+
+    .form-container h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #007BFF, #0056b3);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .form-container button:hover {
+      background: linear-gradient(to right, #0056b3, #003f7f);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: red;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .form-container {
+        margin: 40px 20px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🍽️ My Canteen</div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="menuue">Menu</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="reg">Register</a></li>
+        <li><a href="login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h1>Register Here</h1>
+    <form action="aaa" method="post">
+      <input type="text" name="name" placeholder="Enter your name" pattern="[A-Za-z ]{2,}" required>
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <input type="tel" name="number" placeholder="Enter your number" pattern="[0-9]{10}" required>
+      <input type="password" name="pass" placeholder="Enter your password" required>
+      <button type="submit">Register</button>
+    </form>
+    <h2 th:text="${err}"></h2>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Canteen. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

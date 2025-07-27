@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Canteen Order</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f9d423, #ff4e50);
+      color: #333;
+      padding-bottom: 60px;
+    }
+
+    header {
+      background-color: #ff6347;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .top-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .menu-card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      max-width: 500px;
+      margin: 60px auto;
+    }
+
+    .menu-card h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #ff6347;
+    }
+
+    .form-control, .form-select {
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e5533d;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+    
+  <!-- Header -->
+  <header>
+    <div class="top-buttons">
+      <a href="feed" class="btn btn-warning">📝 Feedback</a>
+      <a href="logout" class="btn btn-danger">🚪 Logout</a>
+    </div>
+  </header>
+
+  <!-- Order Form -->
+  <div class="menu-card">
+    <h2>Place Your Order</h2>
+    <form action="order" method="post" onsubmit="return confirmOrder()">
+      <input type="text" name="enrolment" placeholder="Enter Your Enrolment ID" class="form-control" required>
+      
+      <select name="item" class="form-select" required>
+        <option value="">Select Item</option>
+        <option value="Veg Burger">Veg Burger - ₹40</option>
+        <option value="Masala Dosa">Masala Dosa - ₹50</option>
+        <option value="Paneer Roll">Paneer Roll - ₹45</option>
+        <option value="Noodles">Noodles - ₹40</option>
+        <option value="Cold Drink">Cold Drink - ₹25</option>
+        <option value="Aloo Paratha">Aloo Paratha - ₹35</option>
+        <option value="Poha">Poha - ₹25</option>
+        <option value="French Fries">French Fries - ₹30</option>
+      </select>
+
+      <select name="quantity" class="form-select" required>
+        <option value="">Select Quantity</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Canteen. All rights reserved.</p>
+  </footer>
+
+  <!-- Confirmation Alert -->
+  <script>
+    function confirmOrder() {
+      alert("Order Confirmed");
+      return true; // allow form to submit
+    }
+  </script>
+
+</body>
+</html>

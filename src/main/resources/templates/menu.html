@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canteen Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #ff6347;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .menu-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      flex: 1;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    .menu-category {
+      margin-bottom: 30px;
+    }
+
+    .menu-category h2 {
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 8px;
+      color: #3498db;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+
+    .item-name {
+      font-weight: 500;
+    }
+
+    .item-price {
+      font-weight: bold;
+      color: #27ae60;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .item-price {
+        margin-top: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🍽️ My Canteen</div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="menuue">Menu</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="reg">Register</a></li>
+        <li><a href="login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Menu Content -->
+  <div class="menu-container">
+    <h1>Canteen Menu</h1>
+
+    <div class="menu-category">
+      <h2>Available Items</h2>
+
+      <div class="menu-item">
+        <div class="item-name">Veg Burger</div>
+        <div class="item-price">₹40</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-name">Masala Dosa</div>
+        <div class="item-price">₹50</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-name">Paneer Roll</div>
+        <div class="item-price">₹45</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-name">Noodles</div>
+        <div class="item-price">₹40</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-name">Cold Drink</div>
+        <div class="item-price">₹25</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-name">Aloo Paratha</div>
+        <div class="item-price">₹35</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-name">Poha</div>
+        <div class="item-price">₹25</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-name">French Fries</div>
+        <div class="item-price">₹30</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Canteen. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
